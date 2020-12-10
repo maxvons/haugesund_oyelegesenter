@@ -1,0 +1,231 @@
+/* Light mode colors */
+:root[color-mode="light"] {
+
+    /* Light background colors */
+    --color-background: #FFFFFF;
+    --color-background-text: #EBF5FE;
+    --color-background-contact-button: #FFFFFF;
+
+    /* Light primary/secondary etc. colors */
+    --color-primary-900: #2D4F9F;
+    --color-primary-800: #376DBF;
+    --color-primary-700: #3D7ED1;
+
+    /* Light text colors */
+    --color-text-primary: #232A3A; /* 14.34 contrast against FFF */
+    --color-text-secondary: #54565D; /* 7.32 contrast against FFF */
+
+    /* Light component colors */
+    --color-arrow: #7C7E82; /* 4.06 contrast against FFF */
+}
+
+/* Dark mode colors */
+:root[color-mode="dark"] {
+    --color-background: #040A17;
+}
+
+/* TAG STYLING */
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+p {
+    font-family: "IBM Plex Sans", Arial;
+    font-size: 2rem;
+}
+
+h1 {
+    margin: 0;
+}
+
+h2 {
+    margin: 0;
+}
+
+
+/* CLASS STYLING */
+
+/* Layout styles */
+
+.full-page {
+    width: 85vw;
+    height: 100vh;
+    max-width: 150rem;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 6.4rem;
+    justify-items: stretch;
+    align-items: center;
+    justify-content: center;
+}
+
+.align-start {
+    align-items: start;
+}
+
+.left-side {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+}
+
+.right-side {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-end;
+}
+
+.center-items {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-div {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-self: end;
+}
+
+.margin-right-small {
+    margin-right: 1.6rem;
+}
+
+.margin-right-medium {
+    margin-right: 3.2rem;
+}
+
+.margin-bottom-medium {
+    margin-bottom: 3.2rem;
+}
+
+.margin-bottom-large {
+    margin-bottom: 6.4rem;
+}
+
+.margin-bottom-very-large {
+    margin-bottom: 12.8rem;
+}
+
+.margin-bottom-logo {
+    margin-bottom: 18rem;
+}
+
+/* Text styles */
+
+.section-heading {
+    font-family: "IBM Plex Serif";
+    font-size: 6.4rem;
+    font-weight: 400;
+    color: var(--color-text-primary);
+}
+
+.section-subheading {
+    font-family: "IBM Plex Sans";
+    font-size: 3rem;
+    font-weight: 400;
+    color: var(--color-text-secondary);
+}
+
+.title {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.normal-text {
+    font-family: "IBM Plex Sans", Arial;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.nav-link {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* Component styles */
+
+.heading-accent {
+    width: 5rem;
+    height: 0.5rem;
+    background-color: var(--color-primary-800);
+    border-radius: 20px;
+}
+
+.contact-button {
+    font-family: "IBM Plex Sans";
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--color-primary-900);
+    background-color: var(--color-background-contact-button);
+    border: 4px solid var(--color-primary-900);
+    border-radius: 5px;
+    padding: 1.6rem 3.2rem;
+    box-shadow:  0px 3px 1px -2px rgba(0, 0, 0, 0.2), /*  2dp - umbra */
+    0px 2px 2px 0px rgba(0, 0, 0, 0.14), /* 2dp - penumbra */
+    0px 1px 5px 0px rgba(0, 0, 0, 0.12); /* 2dp - ambient */
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.contact-button:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), /* 8dp - umbra */
+    0px 8px 10px 1px rgba(0, 0, 0, 0.14), /* 8dp - penumbra */
+    0px 3px 14px 2px rgba(0, 0, 0, 0.12); /* 8dp - ambient */
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.text-box {
+    background-color: var(--color-background-text);
+    border-radius: 20px;
+    padding: 3.2rem;
+    text-align: left;
+}
+
+.landing-graphic {
+    background-color: var(--color-background);
+}
+
+.logo {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    font-family: "IBM Plex Sans", Arial;
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--color-text-primary);
+    text-transform: uppercase;
+}
+
+/* ID STYLING */
+
+#main-div {
+    background-color: var(--color-background);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3.2rem;
+}
+
+#landing-page {
+}
