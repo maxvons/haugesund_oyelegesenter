@@ -9,15 +9,21 @@
     --color-background-about-page: #FFFFFF;
     --color-background-find-page: #FFFFFF;
     --color-background-contact-page: #FFFFFF;
+    --color-background-footer: #FFFFFF;
 
     /* Light primary/secondary etc. colors */
     --color-primary-900: #2D4F9F;
     --color-primary-800: #376DBF;
     --color-primary-700: #3D7ED1;
+    --color-primary-600: #4490E4;
+    --color-primary-300: #76BCF6;
+    --color-primary-200: #9ACFF9;
 
     /* Light text colors */
     --color-text-primary: #232A3A; /* 14.34 contrast against FFF */
     --color-text-secondary: #54565D; /* 7.32 contrast against FFF */
+    --color-link-hover: #2D4F9F;
+    --color-text-white: #F5F6FA;
 
     /* Light component colors */
     --color-arrow: #7C7E82; /* 4.06 contrast against FFF */
@@ -65,10 +71,41 @@ h3 {
     margin: 0;
 }
 
+a {
+    color: var(--color-text-white);
+    text-decoration: none;
+}
+
+a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background: var(--color-primary-200);
+    transition: width 0.5s;
+}
+
+a:hover::after {
+    width: 100%;
+}
 
 /* CLASS STYLING */
 
 /* Layout styles */
+
+.navbar {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 85vw;
+}
+
+.navbar-div {
+    width: 100vw;
+    background-color: var(--color-black);
+    margin-bottom: 12.8rem;
+}
 
 .full-page {
     width: 85vw;
@@ -164,6 +201,22 @@ h3 {
     margin-bottom: 18rem;
 }
 
+.padding-top-small {
+    padding-top: 1.6rem;
+}
+
+.padding-top-medium {
+    padding-top: 3.2rem;
+}
+
+.padding-bottom-small {
+    padding-bottom: 1.6rem;
+}
+
+.padding-bottom-medium {
+    padding-bottom: 3.2rem;
+}
+
 .border-radius-medium {
     border-radius: 20px;
 }
@@ -220,6 +273,10 @@ h3 {
 }
 
 /* Component styles */
+
+.no-bottom-border:hover::after {
+    width: 0;
+}
 
 .heading-accent {
     width: 5rem;
@@ -304,7 +361,7 @@ h3 {
     font-family: "IBM Plex Sans", Arial;
     font-size: 2rem;
     font-weight: 400;
-    color: var(--color-text-primary);
+    color: var(--color-text-white);
     text-transform: uppercase;
 }
 
@@ -320,10 +377,30 @@ h3 {
     background-color: var(--color-background-contact-page);
 }
 
+.footer {
+    background-color: var(--color-background-footer);
+    width: 100vw;
+    color: var(--color-text-primary);
+    padding: 1.6rem 0;
+    text-align: center;
+}
+
 /* UTILITY STYLES */
 
 .hide {
     display: none;
+}
+
+.border-bottom {
+    border-bottom: 3px solid var(--color-primary-700);
+}
+
+.blue-text {
+    color: var(--color-primary-900);
+}
+
+.strong-text {
+    font-weight: 700;
 }
 
 /* ID STYLING */
@@ -334,11 +411,13 @@ h3 {
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    margin-top: 3.2rem;
 }
 
-#landing-page {
-}
 
-#about-page {
+/* Styling for mobile screens */
+
+@media screen and (max-width: 900px) {
+    #landing-page {
+        background-color: red;
+    }
 }
