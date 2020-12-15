@@ -22,17 +22,17 @@
         <div id="main-div">
             <div class="navbar-div center-items">
                 <nav class="navbar padding-top-small padding-bottom-small">
-                    <a class="no-bottom-border" href="#main-div">
+                    <a href="#main-div">
                         <span class="logo">
-                            <img class="margin-right-small" src="assets/logo.svg" alt="Haugesund Øyelegesenter logo">
+                            <img class="margin-right-small" src="assets/vector_graphics/logo.svg" alt="Haugesund Øyelegesenter logo">
                             Haugesund<br>Øyelegesenter
                         </span>
                     </a>
                     <div class="nav-div">
-                        <p class="nav-link margin-right-medium"><a href="#contact-page">Kontakt</a></p>
-                        <p class="nav-link margin-right-medium"><a href="#about-page">Om oss</a></p>
-                        <p class="nav-link margin-right-medium"><a href="#find-page">Finn oss</a></p>
-                        <p class="nav-link"><a href="#diseases-page">Øyesykdommer</a></p>
+                        <p class="margin-right-medium"><a class="nav-link" href="#contact-page">Kontakt</a></p>
+                        <p class="margin-right-medium"><a class="nav-link" href="#about-page">Om oss</a></p>
+                        <p class="margin-right-medium"><a class="nav-link" href="#find-page">Finn oss</a></p>
+                        <p><a class="nav-link" href="#diseases-page">Øyesykdommer</a></p>
                     </div>
                 </nav>
             </div>
@@ -41,10 +41,10 @@
                     <h1 class="section-heading title margin-bottom-medium">Haugesund Øyelegesenter</h1>
                     <span class="heading-accent margin-bottom-medium"></span>
                     <h2 class="section-subheading margin-bottom-very-large">Den beste behandlingen for deg med øyesykdommer.</h2>
-                    <button class="contact-button" aria-label="Kontakt Haugesund Øyelegesenter">Kontakt oss</button>
+                    <a href="#contact-page"><button class="contact-button" aria-label="Kontakt Haugesund Øyelegesenter">Kontakt oss</button></a>
                 </div>
                 <div class="right-side">
-                    <img class="landing-graphic" src="assets/landing_graphic.svg" alt="Landing page graphic">
+                    <img class="landing-graphic" src="assets/vector_graphics/landing_graphic.svg" alt="Landing page graphic">
                 </div>
             </div>
             <div id="about-page" class="full-page-background about-background-color margin-bottom-large">
@@ -75,7 +75,7 @@
                         </div>
                     </div>
                     <div class="right-side">
-                        <img src="assets/about_graphic.svg" alt="About page graphic">
+                        <img src="assets/vector_graphics/about_graphic.svg" alt="About page graphic">
                     </div>
                 </div>
             </div>
@@ -88,13 +88,17 @@
                         <p class="normal-text margin-bottom-medium">Vi befinner oss midt i sentrum bare få minutter unna Markedet og Rådhuset. Vi hører til i samme bygg som Specsavers, i overetasjen.</p>
                         <div class="find-card">
                             <h3 class="find-card-section-heading">Addresse</h3>
-                            <p class="find-card-section-info margin-bottom-large">Haraldsgata 78, 5528 Haugesund</p>
+                            <p class="find-card-section-info margin-bottom-large">
+                                <a class="address-link" href="https://www.google.no/maps/place/Haraldsgata+78,+5528+Haugesund/@59.4098144,5.2709039,17z/data=!3m1!4b1!4m5!3m4!1s0x463b9fcd1b07eeeb:0x685e8523239860b3!8m2!3d59.4098144!4d5.2730926" target="_blank">
+                                    Haraldsgata 78, 5528 Haugesund
+                                </a>
+                            </p>
                             <h3 class="find-card-section-heading">Åpningstider</h3>
                             <p class="find-card-section-info margin-bottom-none">Vi har åpent 09-19 fra mandag til onsdag.</p>
                         </div>
                     </div>
                     <div class="right-side">
-                        <img class="border-radius-medium img-card" src="assets/gmaps.png" alt="Veibeskrivelse">
+                        <img class="border-radius-medium img-card" src="assets/screenshots/gmaps.png" alt="Veibeskrivelse">
                     </div>
                     <!-- Find us page -->
                 </div>
@@ -105,7 +109,7 @@
                         <h1 class="section-heading margin-bottom-medium">Kontakt oss</h1>
                         <span class="heading-accent margin-bottom-medium"></span>
                         <span class="contact-subheading margin-bottom-large">
-                            <img class="margin-right-small" src="assets/phone.svg" alt="Phone icon">
+                            <img class="margin-right-small" src="assets/icons/phone_icon.svg" alt="Phone icon">
                             <h2 class="section-subheading inline">+47 52 70 94 05</h2>
                         </span>
                         <div class="text-box">
@@ -130,12 +134,12 @@
                         </div>
                     </div>
                     <div class="right-side">
-                        <img src="assets/contact_graphic.svg" alt="Contact page graphic">
+                        <img src="assets/vector_graphics/contact_graphic.svg" alt="Contact page graphic">
                     </div>
                 </div>
             </div>
             <footer class="footer">
-                <p>Made with 🖤 by Maximilian von Stephanides</p>
+                <p>Made with 🖤 by <a class="personal-page-link strong-text" href="https://maximilian.netlify.app/" target="_blank">Maximilian von Stephanides</a></p>
             </footer>
             <button class="to-top-button hide">Opp til toppen</button>
             <a href="#about-page">
