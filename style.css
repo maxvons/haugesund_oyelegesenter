@@ -315,10 +315,9 @@ a {
 
 .find-card-section-heading {
     font-family: "Source Sans Pro", Arial;
-    font-size: 2rem;
-    font-weight: 500;
+    font-size: 1.8rem;
+    font-weight: 700;
     text-transform: uppercase;
-    border-bottom: 3px solid var(--color-black);
 }
 
 .find-card-section-info {
@@ -427,7 +426,7 @@ a {
 .disease-button {
     font-family: "Source Sans Pro", Arial;
     font-size: 2rem;
-    font-weight: 600;
+    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     color: var(--color-primary-900);
