@@ -546,12 +546,12 @@ a {
     position: fixed;
     bottom: 3.2rem;
     transition: transform 0.2s ease;
-    animation: pulseSlow 5s infinite;
+    animation: pulse_slow 5s infinite;
     opacity: 1;
 }
 
 
-@keyframes pulseSlow {
+@keyframes pulse_slow {
     20% {
         transform: scale(1.2);
         transform: translateY(-10px);
@@ -563,7 +563,7 @@ a {
     }
 }
 
-@keyframes changeColor {
+@keyframes change_color {
     20% {
         stroke: var(--color-primary-600);
     }
@@ -576,7 +576,7 @@ a {
 .continue-arrow {
     stroke: var(--color-arrow);
     transform: stroke 0.2s ease;
-    animation: changeColor 5s infinite;
+    animation: change_color 5s infinite;
 }
 
 .continue-icon:hover {
@@ -628,6 +628,7 @@ a {
     top: 300px;
     left: 0;
     background-color: var(--color-background);
+    opacity: 0;
 }
 
 body.header-not-at-top .continue-icon {
