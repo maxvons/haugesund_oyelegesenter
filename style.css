@@ -10,7 +10,7 @@
     --color-background-find-page: #FFFFFF;
     --color-background-contact-page: #FFFFFF;
     --color-background-diseases-page: #FFFFFF;
-    --color-background-footer: #FFFFFF;
+    --color-background-footer: #2D4F9F;
     --color-background-contact-button-active: #e5f3fd;
 
     /* Light primary/secondary etc. colors */
@@ -32,6 +32,7 @@
     /* Light component colors */
     --color-arrow: #7C7E82; /* 4.06 contrast against FFF */
     --color-arrow-hovered: #7c7e82b4;
+    --color-heart: 	#a6d8a1;
 
     /* Light colors */
     --color-white: #FFFFFF;
@@ -124,6 +125,11 @@ a {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
+}
+
+#diseases-page.full-page-background {
+    overflow: hidden;
+    padding-bottom: 0.3rem;
 }
 
 .disease-div {
@@ -263,7 +269,7 @@ a {
 .section-heading {
     font-family: "Source Serif Pro";
     font-size: 6.4rem;
-    font-weight: 400;
+    font-weight: 700;
     color: var(--color-text-primary);
 }
 
@@ -275,7 +281,7 @@ a {
 }
 
 .title {
-    font-weight: 700;
+    font-weight: 900;
     text-transform: uppercase;
     letter-spacing: 0.08em;
 }
@@ -326,12 +332,12 @@ a {
     border-bottom: 2px solid var(--color-primary-900);
 }
 
-.personal-page-link {
-    color: var(--color-primary-900);
+.footer-text {
+    color: var(--color-text-white);
 }
 
 .personal-page-link:visited {
-    color: var(--color-primary-900);
+    color: var(--color-text-white);
 }
 
 .disease-heading {
@@ -535,7 +541,7 @@ a {
 }
 
 .footer {
-    background-color: var(--color-background-footer);
+    background-color: var(--color-black);
     width: 100%;
     color: var(--color-text-primary);
     padding: 1.6rem 0;
@@ -549,7 +555,6 @@ a {
     animation: pulse_slow 5s infinite;
     opacity: 1;
 }
-
 
 @keyframes pulse_slow {
     20% {
