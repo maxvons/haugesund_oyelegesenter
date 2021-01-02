@@ -715,7 +715,6 @@ body.header-not-at-top .continue-icon {
     .layout {
         grid-template-columns: 1fr;
         justify-items: center;
-        text-align: center;
         align-items: center;
     }
 
@@ -772,6 +771,22 @@ body.header-not-at-top .continue-icon {
 
     .diseases-graphic-bottom-left {
         display: none;
+    }
+
+    .title {
+        text-align: center;
+    }
+
+    .section-heading {
+        text-align: center;
+    }
+
+    .section-subheading {
+        text-align: center;
+    }
+
+    #find-page .normal-text {
+        text-align: center;
     }
 }
 
