@@ -107,7 +107,6 @@ a {
 .navbar-div {
     width: 100%;
     background-color: var(--color-white);
-    margin-bottom: 12.8rem;
 }
 
 .full-page {
@@ -295,9 +294,9 @@ a {
 }
 
 .title {
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
+    font-size: 9rem;
+    font-weight: 700;
+    letter-spacing: -0.05em;
 }
 
 .normal-text {
@@ -705,9 +704,6 @@ body.header-not-at-top .continue-icon {
 /* Styling for mobile screens */
 
 @media screen and (max-width: 950px) {
-    .navbar-div {
-        margin-bottom: 3.2rem;
-    }
 
     /* Make navbar responsive for mobile screens */
     .navbar {
