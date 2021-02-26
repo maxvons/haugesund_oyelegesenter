@@ -11,7 +11,7 @@
     --color-background-find-page: #FFFFFF;
     --color-background-contact-page: #FFFFFF;
     --color-background-diseases-page: #FFFFFF;
-    --color-background-footer: #2D4F9F;
+    --color-background-footer: #212121;
     --color-background-contact-button-active: #e5f3fd;
 
     /* Light primary/secondary etc. colors */
@@ -123,7 +123,7 @@ a {
 
 .layout {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
 }
 
@@ -144,8 +144,7 @@ a {
 
 .disease-div {
     display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
+    grid-template: repeat(2, 1fr) / repeat(2, 1fr);
     column-gap: 6.4rem;
     row-gap: 6.4rem;
     position: relative;
@@ -182,6 +181,25 @@ a {
     display: flex;
     flex-flow: row nowrap;
     justify-self: end;
+}
+
+.footer-contact-info-div {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.footer-attribution-wrapper {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footer-attribution-div {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .contact-subheading {
@@ -359,19 +377,21 @@ a {
     border-bottom: 2px solid var(--color-background-text);
 }
 
-
 .footer-text {
+    font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
     color: var(--color-text-white);
     font-size: var(--text-size-footer);
+    margin-top: 0;
 }
 
-.personal-page-link {
+.footer-link {
     color: var(--color-text-white);
     border-bottom: 2px solid var(--color-white);
     transition: all 0.2s ease;
+    cursor: pointer;
 }
 
-.personal-page-link:hover {
+.footer-link:hover {
     color: var(--color-text-white-hovered);
     border-bottom: 2px solid var(--color-black);
 }
@@ -492,8 +512,7 @@ a {
 .disease-card {
     display: flex;
     flex-flow: column nowrap;
-    justify-content: flex-start;
-    align-items: flex-start;
+    align-items: center;
     background-color: var(--color-background-text);
     border-radius: 20px;
     box-shadow:  0px 2px 1px -1px rgba(0, 0, 0, 0.2), /* 1dp - umbra */
@@ -545,12 +564,26 @@ a {
     bottom: 2rem;
 }
 
-.footer {
-    background-color: var(--color-black);
+.footer-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    color: var(--color-text-primary);
-    padding: 1.6rem 0;
-    text-align: center;
+    background-color: var(--color-background-footer);
+}
+
+.footer {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    padding: 6.4rem 0;
+}
+
+.footer > * {
+    flex-basis: 0;
+    flex-grow: 1;
 }
 
 .continue-icon {
@@ -609,6 +642,10 @@ a {
 
 .rotate {
     transform: rotate(-90deg);
+}
+
+.center-text {
+    text-align: center;
 }
 
 /* ID STYLING */
@@ -795,14 +832,17 @@ body.header-not-at-top .continue-icon {
         font-size: 4rem;
     }
 
+    .find-card {
+        align-items: center;
+    }
+
     .find-text {
         text-align: center;
     }
 
     .disease-div {
-        grid-template: 
-            1fr
-            / 1fr;
+        grid-template:
+            1fr / 1fr;
     }
 
     .diseases-layout {
@@ -831,6 +871,41 @@ body.header-not-at-top .continue-icon {
 
     .section-subheading {
         text-align: center;
+    }
+
+    .footer {
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer >:not(:last-child) {
+        margin-bottom: 3.2rem;
+    }
+
+    .footer >:nth-child(2) {
+        order: 1;
+    }
+
+    .footer >:nth-child(1) {
+        order: 2;
+    }
+
+    .footer >:nth-child(3) {
+        order: 3;
+    }
+
+    .footer-contact-info-div {
+        align-items: center;
+    }
+
+    .footer-attribution-wrapper {
+        justify-content: center;
+    }
+
+    .footer-attribution-div {
+        text-align: center;
+        align-items: center;
     }
 }
 
