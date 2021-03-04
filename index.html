@@ -5,9 +5,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Haugesund Øyelegesenter</title>
-        <meta name="description" content="Din øyelege i Haugesund og omegn">
+        <meta name="description" content="Din øyelege i Haugesund og omegn.">
         <meta property="og:title" content="Haugesund Øyelegesenter">
-        <meta property="og:description" content="Din øyelege i Haugesund og omegn">
+        <meta property="og:description" content="Din øyelege i Haugesund og omegn.">
         <meta property="og:image" content="assets/screenshots/demo_screenshot.png">
         <meta property="og:url" content="https://haugesundos.netlify.app/">
         <meta name="twitter:card" content="summary">
@@ -36,10 +36,34 @@
                         </span>
                     </a>
                     <div class="nav-div">
-                        <p class="margin-right-medium"><a class="nav-link" href="#contact-page">Kontakt</a></p>
-                        <p class="margin-right-medium"><a class="nav-link" href="#about-page">Om oss</a></p>
-                        <p class="margin-right-medium"><a class="nav-link" href="#find-page">Finn oss</a></p>
-                        <p><a class="nav-link" href="#diseases-page">Øyesykdommer</a></p>
+                            <a class="nav-link margin-right-large" href="#contact-page" title="Kontakt oss via telefon">
+                                <svg class="nav-icon padding-top-mini" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-labelledby="telephone-nav-icon" role="img">
+                                    <title id="telephone-nav-icon">Kontakt oss via telefon</title>
+                                    <use href="#telephone-icon"></use>
+                                </svg>
+                                Kontakt
+                            </a>
+                        <a class="nav-link margin-right-large" href="#about-page" title="Informasjon om oss">
+                            <svg class="nav-icon padding-top-mini" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-labelledby="about-nav-icon" role="img">
+                                <title id="about-nav-icon">Informasjon om oss</title>
+                                <use href="#about-icon"></use>
+                            </svg>
+                            Om oss
+                        </a>
+                        <a class="nav-link margin-right-large" href="#find-page" title="Informasjon om hvordan du finner oss">
+                            <svg class="nav-icon padding-top-mini" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-labelledby="find-nav-icon" role="img">
+                                <title id="find-nav-icon">Informasjon om hvordan du finner oss</title>
+                                <use href="#find-icon"></use>
+                            </svg>
+                            Finn oss
+                        </a>
+                        <a class="nav-link" href="#diseases-page" title="Informasjon om øyesykdommer">
+                            <svg class="nav-icon padding-top-mini" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-labelledby="disease-nav-icon" role="img">
+                                <title id="disease-nav-icon">Informasjon om øyesykdommer</title>
+                                <use href="#disease-icon"></use>
+                            </svg>
+                            Øyesykdommer
+                        </a>
                     </div>
                     <svg class="menu-icon" onclick="toggleMobileMenu()" width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M3 12H21" stroke="#232A3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -101,8 +125,12 @@
                         <div class="find-card">
                             <h3 class="find-card-section-heading">Addresse</h3>
                             <p class="find-card-section-info margin-bottom-large">
-                                <a class="address-link" href="https://www.google.no/maps/place/Haraldsgata+78,+5528+Haugesund/@59.4098144,5.2709039,17z/data=!3m1!4b1!4m5!3m4!1s0x463b9fcd1b07eeeb:0x685e8523239860b3!8m2!3d59.4098144!4d5.2730926" target="_blank" rel="noopener">
+                                <a class="external-link" href="https://www.google.no/maps/place/Haraldsgata+78,+5528+Haugesund/@59.4098144,5.2709039,17z/data=!3m1!4b1!4m5!3m4!1s0x463b9fcd1b07eeeb:0x685e8523239860b3!8m2!3d59.4098144!4d5.2730926" target="_blank" rel="noopener" title="Vis Haugesund Øyelegesenter på Google Maps i ny fane">
                                     Haraldsgata 78, 5528 Haugesund
+                                    <svg class="external-link-icon padding-top-mini margin-left-mini" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-labelledby="maximilian-link-icon" role="img">
+                                        <title id="maximilian-link-icon">Vis Haugesund Øyelegesenter på Google Maps i ny fane</title>
+                                        <use href="#link-icon"></use>
+                                    </svg>
                                 </a>
                             </p>
                             <h3 class="find-card-section-heading">Åpningstider</h3>
@@ -128,7 +156,15 @@
                                 Man opplever å se uklart, som å se gjennom et skittent
                                 vindusglass. De fleste over 70 år har en begynnende grå stær.
                             </p>
-                            <button class="disease-button">Les mer</button>
+                            <a href="gra_star.html" title="Les mer om grå stær">
+                                <button class="disease-button">
+                                    Les mer
+                                    <svg class="button-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-labelledby="gra-star-link-icon" role="img">
+                                        <title id="gra-star-link-icon">Les mer om grå stær</title>
+                                        <use href="#read-more-icon"></use>
+                                    </svg>
+                                </button>
+                            </a>
                         </div>
                         <div class="disease-card">
                             <h3 class="disease-heading margin-bottom-small">Tørre øyne</h3>
@@ -138,7 +174,14 @@
                                 av årsaksforklaringer. Tørre øyne er vanlig med økende alder,
                                 og vanligere hos kvinner enn hos menn.
                             </p>
-                            <button class="disease-button">Les mer</button>
+                            <a href="torrhet.html" title="Les mer om tørrhet i øynene">
+                                <button class="disease-button">Les mer
+                                    <svg class="button-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-labelledby="torrhet-link-icon" role="img">
+                                        <title id="torrhet-link-icon">Les mer om tørrhet i øynene</title>
+                                        <use href="#read-more-icon"></use>
+                                    </svg>
+                                </button>
+                            </a>
                         </div>
                         <div class="disease-card">
                             <h3 class="disease-heading margin-bottom-small">Grønn stær - Glaukom</h3>
@@ -148,7 +191,15 @@
                                 Dette påvirker pasienten i form av gradvis tap av synsfeltet,
                                 området hjernen oppfatter gjennom øynene.
                             </p>
-                            <button class="disease-button">Les mer</button>
+                            <a href="gronn-star.html" title="Les mer om grønn stær">
+                                <button class="disease-button">
+                                    Les mer
+                                    <svg class="button-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-labelledby="gronn-star-link-icon" role="img">
+                                        <title id="gronn-star-link-icon">Les mer om grønn stær</title>
+                                        <use href="#read-more-icon"></use>
+                                    </svg>
+                                </button>
+                            </a>
                         </div>
                         <div class="disease-card">
                             <h3 class="disease-heading margin-bottom-small">Øyeforandringer ved diabetes</h3>
@@ -158,7 +209,15 @@
                                 komplikasjoner i en rekke organer, også i øynene.
                                 En vanlig komplikasjon er diabetisk retinopati.
                             </p>
-                            <button class="disease-button">Les mer</button>
+                            <a href="diabetes.html" title="Les mer om øyeforandringer ved diabetes">
+                                <button class="disease-button">
+                                    Les mer
+                                    <svg class="button-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-labelledby="diabetes-link-icon" role="img">
+                                        <title id="diabetes-link-icon">Les mer om øyeforandringer ved diabetes</title>
+                                        <use href="#read-more-icon"></use>
+                                    </svg>
+                                </button>
+                            </a>
                         </div>
                         <svg class="diseases-graphic-top-right" width="150" height="178" viewBox="0 0 150 178" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="25" cy="86" r="25" fill="#76BCF6"/>
@@ -178,15 +237,18 @@
                     <div class="left-side">
                         <h1 class="section-heading margin-bottom-medium">Kontakt oss</h1>
                         <span class="heading-accent margin-bottom-medium"></span>
-                        <a href=tel:+4752709405>
+                        <a href=tel:+4752709405 title="Ring Haugesund Øyelegesenter">
                             <span class="contact-subheading margin-bottom-large">
-                                <img class="margin-right-small" src="assets/icons/phone_icon.svg" alt="Phone icon">
+                                <svg class="margin-right-small" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#2D4F9F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-labelledby="telephone-contact-link-icon" role="img">
+                                    <title id="telephone-contact-link-icon">Ring Haugesund Øyelegesenter</title>
+                                    <use href="#telephone-icon"></use>
+                                </svg>
                                 <h2 class="section-subheading inline">+47 52 70 94 05</h2>
                             </span>
                         </a>
                         <div class="text-box">
                             <p class="normal-text margin-top-none margin-bottom-none">
-                                Hvis du trenger å endre en time eller har noen andre spørsmål, er det bare å <a class="telephone-link" href=tel:+4752709405>ringe oss</a> via nummeret oppgitt på denne siden. 
+                                Hvis du trenger å endre en time eller har noen andre spørsmål, er det bare å <a class="external-link" href=tel:+4752709405 title="Ring Haugesund Øyelegesenter">ringe oss</a> via nummeret oppgitt på denne siden. 
                                 Vi har ingen fast telefontid, men svarer vanligvis i løpet av dagen når som helst.
                             </p>
                         </div>
@@ -199,7 +261,13 @@
             <div class="footer-div">
                 <footer class="footer">
                     <div class="footer-contact-info-div">
-                        <a class="footer-text bold-text footer-link margin-bottom-medium" href=tel:+4752709405>+47 52 70 94 05</a>
+                        <a class="footer-text bold-text footer-link margin-bottom-medium" href=tel:+4752709405 title="Ring Haugesund Øyelegesenter">
+                            +47 52 70 94 05
+                            <svg class="telephone-link-icon padding-top-telephone" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-labelledby="telephone-link-icon-id" role="img">
+                                <title id="telephone-link-icon-id">Ring Haugesund Øyelegesenter</title>
+                                <use href="#telephone-icon"></use>
+                            </svg>
+                        </a>
                         <p class="footer-text margin-bottom-small">Haraldsgata 78, 5528 Haugesund</p>
                         <p class="footer-text margin-bottom-none">08-19 mandag-onsdag</p>
                     </div>
@@ -207,14 +275,30 @@
                     <div class="footer-attribution-wrapper">
                         <div class="footer-attribution-div">
                             <p class="footer-text">Made with 💛 by
-                                <a class="footer-link" href="https://maximilian.netlify.app/" target="_blank" rel="noopener">Maximilian von Stephanides</a>
+                                <a class="footer-link" href="https://www.maxvons.no" target="_blank" rel="noopener" title="Gå til Maximilian sin nettside i ny fane">
+                                    Maximilian von Stephanides
+                                    <svg class="external-link-icon padding-top-mini margin-left-mini" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-labelledby="maximilian-link-icon" role="img">
+                                        <title id="maximilian-link-icon">Gå til Maximilian sin nettside i ny fane</title>
+                                        <use href="#link-icon"></use>
+                                    </svg>
+                                </a>
                             </p>
-                            <p class="footer-text">Informasjon om øyesykdommer fra <a class="footer-link" href="https://www.optera.no/" target="_blank" rel="noopener">Optera Bergen</a></p>
+                            <p class="footer-text">Informasjon om øyesykdommer fra
+                                <a class="footer-link" href="https://www.optera.no/" target="_blank" rel="noopener" title="Gå til Optera sin nettside i ny fane">
+                                    Optera Bergen
+                                    <svg class="external-link-icon margin-left-mini" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-labelledby="optera-link-icon" role="img">
+                                        <title id="optera-link-icon">Gå til Optera sin nettside i ny fane</title>
+                                        <use href="#link-icon"></use>
+                                    </svg>
+                                </a>
+                            </p>
                         </div>
                     </div>
                 </footer>
             </div>
             <button class="to-top-button hide">Opp til toppen</button>
+
+            <!-- Continue icon -->
             <a href="#about-page">
                 <svg class="continue-icon" width="34" height="47" viewBox="0 0 34 47" fill="none" xmlns="http://www.w3.org/2000/svg" aria-labelledby="continue-icon-title" role="img">
                     <title id="continue-icon-title">Fortsett nedover</title>
@@ -222,6 +306,45 @@
                     <path class="continue-arrow" d="M3 28L16.6989 42L31 28" stroke-width="7"/>
                 </svg>
             </a>
+
+            <svg style="display: none;">
+                <defs>
+                    <!-- Link icon -->
+                    <symbol id="link-icon" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </symbol>
+
+                    <!-- Telephone icon -->
+                    <symbol id="telephone-icon" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </symbol>
+
+                    <!-- Read more icon -->
+                    <symbol id="read-more-icon" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+                    </symbol>
+
+                    <!-- About us icon -->
+                    <symbol id="about-icon" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                        <circle cx="12" cy="7" r="4"/>
+                    </symbol>
+
+                    <!-- Find us icon -->
+                    <symbol id="find-icon" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                        <circle cx="12" cy="10" r="3"/>
+                    </symbol>
+
+                    <!-- Disease icon -->
+                    <symbol id="disease-icon" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                        <circle cx="12" cy="12" r="3"/>
+                    </symbol>
+                 </defs>
+            </svg>
         </main>
         <div id="top-of-site-pixel-anchor"></div>
     </body>
