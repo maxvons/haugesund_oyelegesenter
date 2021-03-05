@@ -2,15 +2,15 @@
 :root[color-mode="light"] {
 
     /* Light background colors */
-    --color-background: #FFFFFF;
-    --color-background-nav: #FFFFFF;
-    --color-background-text: #EBF5FE;
-    --color-background-contact-button: #FFFFFF;
-    --color-background-landing-page: #FFFFFF;
-    --color-background-about-page: #FFFFFF;
-    --color-background-find-page: #FFFFFF;
-    --color-background-contact-page: #FFFFFF;
-    --color-background-diseases-page: #FFFFFF;
+    --color-background: #F5FBFF;
+    --color-background-nav: #F5FBFF;
+    --color-background-text: #DEEDF8;
+    --color-background-contact-button: #F5FBFF;
+    --color-background-landing-page: #F5FBFF;
+    --color-background-about-page: #F5FBFF;
+    --color-background-find-page: #F5FBFF;
+    --color-background-contact-page: #F5FBFF;
+    --color-background-diseases-page: #F5FBFF;
     --color-background-footer: #212121;
     --color-background-contact-button-active: #e5f3fd;
 
@@ -106,8 +106,7 @@ a {
 
 .navbar-div {
     width: 100%;
-    background-color: var(--color-white);
-    margin-bottom: 12.8rem;
+    background-color: var(--color-background-nav);
 }
 
 .full-page {
@@ -125,6 +124,7 @@ a {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
+    position: relative;
 }
 
 .full-height {
@@ -162,6 +162,7 @@ a {
     display: flex;
     flex-flow: column nowrap;
     align-items: flex-start;
+    z-index: 2;
 }
 
 .right-side {
@@ -244,6 +245,10 @@ a {
 
 .margin-top-none {
     margin-top: 0;
+}
+
+.margin-top-very-large {
+    margin-top: 12.8rem;
 }
 
 .margin-right-mini {
@@ -352,9 +357,14 @@ a {
 }
 
 .title {
+    font-size: 8rem;
     font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
+    letter-spacing: -0.05em;
+    max-width: 50rem;
+}
+
+.title-subheading {
+    max-width: 35rem;
 }
 
 .normal-text {
@@ -580,7 +590,19 @@ a {
 }
 
 .landing-graphic {
-    background-color: var(--color-background);
+    position: absolute;
+    right: -25rem;
+    bottom: 0;
+    max-height: 80vh;
+    max-width: 95rem;
+    z-index: 1;
+}
+
+.about-graphic {
+    position: absolute;
+    right: -20rem;
+    bottom: 0;
+    max-width: 80rem;
 }
 
 .logo {
@@ -735,6 +757,7 @@ a {
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
+    overflow-x: hidden;
 }
 
 #top-of-site-pixel-anchor {
@@ -745,6 +768,24 @@ a {
     left: 0;
     background-color: var(--color-background);
     opacity: 0;
+}
+
+#landing-page {
+    width: 100%;
+    max-width: 183.4rem;
+    max-height: 80rem;
+    height: calc(100vh - (10.8rem + 12.8rem));
+    position: relative;
+}
+
+#landing-page-background-div {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#landing-page .left-side {
+    margin-left: 16.7rem;
 }
 
 body.header-not-at-top .continue-icon {
@@ -762,8 +803,18 @@ body.header-not-at-top .continue-icon {
         width: 90%;
     }
 
+    #landing-page .left-side {
+        margin-left: 6.8rem;
+    }
+
 }
 
+@media screen and (max-width: 1250px) {
+    .about-graphic {
+        max-width: 70rem;
+        right: -20rem;
+    }
+}
 
 /* Styling for narrow screens */
 
@@ -780,6 +831,10 @@ body.header-not-at-top .continue-icon {
         font-size: 5rem;
     }
 
+    .title {
+        font-size: 7rem;
+    }
+
     .section-subheading {
         font-size: 2.4rem;
     }
@@ -794,6 +849,10 @@ body.header-not-at-top .continue-icon {
 
     .contact-button {
         font-size: 1.8rem;
+    }
+
+    .about-graphic {
+        right: -22rem;
     }
 
     .find-card-section-heading {
@@ -819,11 +878,21 @@ body.header-not-at-top .continue-icon {
     }
 }
 
+/* Adjust images */
+@media screen and (min-width: 500px) and (max-width: 950px) {
+    .normal-image {
+        max-width: 45rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .normal-image {
+        max-width: 100%;
+    }
+}
+
 /* Styling for mobile screens */
 @media screen and (max-width: 950px) {
-    .navbar-div {
-        margin-bottom: 3.2rem;
-    }
 
     /* Make navbar responsive for mobile screens */
     .navbar {
@@ -888,6 +957,10 @@ body.header-not-at-top .continue-icon {
         align-items: center;
     }
 
+    .margin-top-very-large {
+        margin-top: 3.2rem;
+    }
+
     .margin-bottom-small {
         margin-bottom: 0.8rem;
     }
@@ -914,6 +987,16 @@ body.header-not-at-top .continue-icon {
 
     .section-heading {
         font-size: 4rem;
+    }
+
+    .title {
+        font-size: 5rem;
+        text-align: center;
+    }
+
+    .about-graphic {
+        position: static;
+        max-width: 100%;
     }
 
     .find-card {
@@ -945,11 +1028,11 @@ body.header-not-at-top .continue-icon {
         display: none;
     }
 
-    .title {
+    .section-heading {
         text-align: center;
     }
 
-    .section-heading {
+    .title {
         text-align: center;
     }
 
@@ -995,18 +1078,41 @@ body.header-not-at-top .continue-icon {
     .padding-top-mini {
         padding-top: 0.3rem;
     }
+
+    #landing-page {
+        height: auto;
+        max-height: none;
+        width: 90%;
+    }
+
+    #landing-page .left-side {
+        margin-left: 0;
+    }
+
+    .landing-graphic {
+        position: static;
+        max-width: 100%;
+    }
 }
 
 @media screen and (max-width: 450px) {
     .section-heading {
         font-size: 3.2rem;
     }
+
+    .title {
+        font-size: 4.5rem;
+    }
 }
 
-/* Adjust the alignment of the external link icon */
+/* Small adjustments */
 @media screen and (max-width: 1148px) and (min-width: 950px) {
     .padding-top-mini {
         padding-top: 0;
+    }
+
+    .landing-graphic {
+        right: -35rem;
     }
 }
 
@@ -1017,15 +1123,11 @@ body.header-not-at-top .continue-icon {
         box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), /* 8dp - umbra */
         0px 8px 10px 1px rgba(0, 0, 0, 0.14), /* 8dp - penumbra */
         0px 3px 14px 2px rgba(0, 0, 0, 0.12); /* 8dp - ambient */
-        transition: box-shadow 0.2s ease, transform 0.2s ease, 
-                    background-color 0.2s ease;
     }
 
     .contact-button:active {
         box-shadow: none;
         outline: none;
-        background-color: var(--color-background-contact-button-active);
-        transition: box-shadow 0.2s ease, background-color 0.2s ease;
     }
 
     .disease-button:hover {
@@ -1056,5 +1158,35 @@ body.header-not-at-top .continue-icon {
     .continue-icon:hover .continue-arrow {
         stroke: var(--color-arrow-hovered);
         transform: stroke 0.2s ease;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    .landing-graphic {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+}
+
+@media screen and (min-width: 1550px) {
+    .title-subheading {
+        max-width: 40rem;
+    }
+}
+
+
+@media screen and (min-height: 1000px) and (min-width: 1750px) {
+    .landing-graphic {
+        max-height: 90vh;
+        max-width: 115rem;
+    }
+
+    #landing-page {
+        max-height: 100rem;
+    }
+
+    #landing-page .left-side {
+        padding-top: 6.4rem;
     }
 }
