@@ -30,47 +30,51 @@
         <main id="main-div">
             <div class="navbar-div center-items">
                 <nav class="navbar padding-top-medium">
-                    <a href="#main-div">
-                        <span class="logo">
-                            <img class="margin-right-small" src="assets/vector_graphics/logo_three.svg" alt="Haugesund Øyelegesenter logo">
-                            Haugesund<br>Øyelegesenter
-                        </span>
-                    </a>
-                    <div class="nav-div">
-                            <a class="nav-link margin-right-large" href="#contact-page" title="Kontakt oss via telefon">
-                                <svg class="nav-icon padding-top-mini" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-labelledby="telephone-nav-icon" role="img">
-                                    <title id="telephone-nav-icon">Kontakt oss via telefon</title>
-                                    <use href="#telephone-icon"></use>
-                                </svg>
-                                Kontakt
-                            </a>
-                        <a class="nav-link margin-right-large" href="#about-page" title="Informasjon om oss">
-                            <svg class="nav-icon padding-top-mini" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-labelledby="about-nav-icon" role="img">
-                                <title id="about-nav-icon">Informasjon om oss</title>
-                                <use href="#about-icon"></use>
-                            </svg>
-                            Om oss
+                    <div class="nav-top-row">
+                        <a href="#main-div">
+                            <span class="logo">
+                                <img class="margin-right-small" src="assets/vector_graphics/logo_three.svg" alt="Haugesund Øyelegesenter logo">
+                                Haugesund<br>Øyelegesenter
+                            </span>
                         </a>
-                        <a class="nav-link margin-right-large" href="#find-page" title="Informasjon om hvordan du finner oss">
-                            <svg class="nav-icon padding-top-mini" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-labelledby="find-nav-icon" role="img">
-                                <title id="find-nav-icon">Informasjon om hvordan du finner oss</title>
-                                <use href="#find-icon"></use>
-                            </svg>
-                            Finn oss
-                        </a>
-                        <a class="nav-link" href="#diseases-page" title="Informasjon om øyesykdommer">
-                            <svg class="nav-icon padding-top-mini" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-labelledby="disease-nav-icon" role="img">
-                                <title id="disease-nav-icon">Informasjon om øyesykdommer</title>
-                                <use href="#disease-icon"></use>
-                            </svg>
-                            Øyesykdommer
-                        </a>
+                        <svg class="menu-icon" onclick="toggleMobileMenu()" width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 12H21" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M3 6H21" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M3 18H21" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
                     </div>
-                    <svg class="menu-icon" onclick="toggleMobileMenu()" width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M3 12H21" stroke="#232A3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M3 6H21" stroke="#232A3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M3 18H21" stroke="#232A3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
+                    <div class="nav-div-wrapper">
+                        <div class="nav-div">
+                                <a class="nav-link margin-right-large" href="#contact-page" title="Kontakt oss via telefon">
+                                    <svg class="nav-icon padding-top-mini" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-labelledby="telephone-nav-icon" role="img">
+                                        <title id="telephone-nav-icon">Kontakt oss via telefon</title>
+                                        <use href="#telephone-icon"></use>
+                                    </svg>
+                                    Kontakt
+                                </a>
+                            <a class="nav-link margin-right-large" href="#about-page" title="Informasjon om oss">
+                                <svg class="nav-icon padding-top-mini" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-labelledby="about-nav-icon" role="img">
+                                    <title id="about-nav-icon">Informasjon om oss</title>
+                                    <use href="#about-icon"></use>
+                                </svg>
+                                Om oss
+                            </a>
+                            <a class="nav-link margin-right-large" href="#find-page" title="Informasjon om hvordan du finner oss">
+                                <svg class="nav-icon padding-top-mini" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-labelledby="find-nav-icon" role="img">
+                                    <title id="find-nav-icon">Informasjon om hvordan du finner oss</title>
+                                    <use href="#find-icon"></use>
+                                </svg>
+                                Finn oss
+                            </a>
+                            <a class="nav-link" href="#diseases-page" title="Informasjon om øyesykdommer">
+                                <svg class="nav-icon padding-top-mini" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-labelledby="disease-nav-icon" role="img">
+                                    <title id="disease-nav-icon">Informasjon om øyesykdommer</title>
+                                    <use href="#disease-icon"></use>
+                                </svg>
+                                Øyesykdommer
+                            </a>
+                        </div>
+                    </div>
                 </nav>
             </div>
             <div id="landing-page-background-div" class="margin-top-very-large margin-bottom-massive">
