@@ -52,6 +52,7 @@
 
     /* Font sizes */
     --text-size-footer: 1.6rem;
+    --text-size-nav-link-open: 2.4rem;
 }
 
 /* TAG STYLING */
@@ -405,7 +406,7 @@ a {
     font-size: 1.8rem;
     font-weight: 700;
     text-transform: uppercase;
-    color: var(--color-text-primary);
+    color: var(--color-text-secondary);
 }
 
 .find-card-section-info {
@@ -468,7 +469,7 @@ a {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    color: var(--color-text-primary);
+    color: var(--color-text-secondary);
 }
 
 .disease-text {
@@ -487,8 +488,9 @@ a {
 }
 
 .menu-icon {
-    transition: transform 0.2s ease;
+    transition: transform 0.2s ease, stroke 0.2s ease;
     display: none;
+    stroke: var(--color-text-primary);
 }
 
 .heading-accent {
@@ -611,8 +613,10 @@ a {
     justify-content: center;
     align-items: center;
     font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
-    font-size: 3rem;
-    font-weight: 400;
+    font-size: 2.8rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
     color: var(--color-text-primary);
 }
 
@@ -693,6 +697,11 @@ a {
     transition: transform 0.2s ease;
     animation: pulse_slow 5s infinite;
     opacity: 1;
+    z-index: 2;
+}
+
+.continue-icon-responsive {
+    display: none;
 }
 
 @keyframes pulse_slow {
@@ -844,7 +853,7 @@ body.header-not-at-top .continue-icon {
     }
 
     .logo {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
 
     .contact-button {
@@ -856,7 +865,7 @@ body.header-not-at-top .continue-icon {
     }
 
     .find-card-section-heading {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
         text-align: center;
     }
 
@@ -896,50 +905,78 @@ body.header-not-at-top .continue-icon {
 
     /* Make navbar responsive for mobile screens */
     .navbar {
-        display: block;
-        position: relative;
+        display: flex;
+        flex-flow: column nowrap;
+    }
+
+    .navbar-div-responsive {
+        background-color: var(--color-primary-900);
+        transition: background-color 0.8s ease;
+    }
+
+    .navbar-div-responsive .logo, .navbar-div-responsive .nav-link, .navbar-div-responsive .menu-icon {
+        color: var(--color-text-white);
+        stroke: var(--color-text-white);
+    }
+
+    .navbar-div-responsive .nav-link {
+        border-bottom: 2px solid var(--color-text-white);
     }
 
     .nav-div {
         display: none;
     }
 
-    .logo {
-        float: left;
-    }
-
     .menu-icon {
         display: block;
-        position: absolute;
-        right: 0;
-        top: 2.4rem;
+    }
+
+    .nav-top-row {
+        display: flex;
+        flex-flow: row nowrap;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .responsive .nav-div-wrapper {
+        height: calc(100vh - 8.9rem);
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .responsive .nav-div {
-        display: block;
-        width: 100%;
-        padding: 0;
-        padding-top: 12.8rem;
-        margin: auto;
-        margin-bottom: 3.2rem;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
     }
 
     .responsive .nav-link {
         display: block;
         text-align: center;
-        margin: 0;
+        font-size: var(--text-size-nav-link-open);
+    }
+
+    /* Remove the icons for the nav links */
+    .responsive svg:not([class^="menu"]) {
+        display: none;
     }
 
     .responsive .nav-div .nav-link:not(:last-child) {
-        margin-bottom: 3.2rem;
+        margin-bottom: 4.8rem;
     }
 
     .responsive .nav-link:hover::after {
         width: 0%;
     }
 
-    .responsive .margin-right-medium {
+    .responsive .margin-right-large {
         margin-right: 0;
+    }
+
+    .logo {
+        font-size: 1.8rem;
     }
 
     .layout {
@@ -959,6 +996,10 @@ body.header-not-at-top .continue-icon {
 
     .margin-top-very-large {
         margin-top: 3.2rem;
+    }
+
+    .margin-right-small {
+        margin-right: 0.8rem;
     }
 
     .margin-bottom-small {
