@@ -115,6 +115,7 @@ a {
     top: 0;
     z-index: 3;
     backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px); /* For mobile devices and safari */
 }
 
 .full-page {
@@ -299,6 +300,10 @@ a {
     margin-bottom: 12.8rem;
 }
 
+.margin-bottom-contact {
+    margin-bottom: 12.8rem;
+}
+
 .margin-bottom-massive {
     margin-bottom: 25.6rem;
 }
@@ -329,6 +334,10 @@ a {
 
 .padding-top-medium {
     padding-top: 3.2rem;
+}
+
+.padding-top-very-large {
+    padding-top: 12.8rem;
 }
 
 .padding-bottom-small {
@@ -495,9 +504,9 @@ a {
 }
 
 .menu-icon {
-    transition: transform 0.2s ease, stroke 0.2s ease;
     display: none;
     stroke: var(--color-text-primary);
+    transition: transform 0.2s ease, stroke 0.2s ease;
 }
 
 .heading-accent {
@@ -626,6 +635,7 @@ a {
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: var(--color-text-primary);
+    transition: color 0.2s ease;
 }
 
 .about-background-color {
@@ -744,6 +754,10 @@ a {
 
 .hide {
     display: none;
+}
+
+.stop-scroll {
+    overflow: hidden;
 }
 
 .border-bottom {
@@ -920,16 +934,7 @@ body.header-not-at-top .continue-icon {
 
     .navbar-div-responsive {
         background-color: var(--color-primary-900);
-        transition: background-color 0.8s ease;
-    }
-
-    .navbar-div-responsive .logo, .navbar-div-responsive .nav-link, .navbar-div-responsive .menu-icon {
-        color: var(--color-text-white);
-        stroke: var(--color-text-white);
-    }
-
-    .navbar-div-responsive .nav-link {
-        border-bottom: 2px solid var(--color-text-white);
+        transition: background-color 0.2s ease;
     }
 
     .nav-div {
@@ -949,7 +954,7 @@ body.header-not-at-top .continue-icon {
     }
 
     .responsive .nav-div-wrapper {
-        height: calc(100vh - 8.9rem);
+        height: calc(100vh - 5.8rem);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -961,10 +966,17 @@ body.header-not-at-top .continue-icon {
         align-items: center;
     }
 
+    .responsive .logo, .responsive .menu-icon {
+        color: var(--color-text-white);
+        stroke: var(--color-text-white);
+    }
+
     .responsive .nav-link {
         display: block;
         text-align: center;
+        color: var(--color-text-white);
         font-size: var(--text-size-nav-link-open);
+        border-bottom: 2px solid var(--color-text-white);
     }
 
     /* Remove the icons for the nav links */
@@ -1029,6 +1041,10 @@ body.header-not-at-top .continue-icon {
     }
 
     .margin-bottom-very-large {
+        margin-bottom: 0rem;
+    }
+
+    .margin-bottom-contact {
         margin-bottom: 6.4rem;
     }
 
