@@ -5,14 +5,39 @@ function toggleMobileMenu() {
     const navDiv = document.querySelector(".navbar-div");
     const menuIcon = document.querySelector(".menu-icon");
     const continueIcon = document.querySelector(".continue-icon");
+    const body = document.querySelector("body");
+    const navLinks = document.querySelectorAll(".nav-link");
 
     if (!nav.classList.contains("responsive")) {
+        body.classList.add("stop-scroll");
         nav.classList.add("responsive");
+        nav.classList.remove("padding-bottom-small");
         navDiv.classList.add("navbar-div-responsive");
         menuIcon.classList.add("rotate");
         continueIcon.classList.add("continue-icon-responsive");
+        navLinks.forEach(link => link.classList.add("animate__animated", "animate__fadeInUp"));
     }   else {
+        body.classList.remove("stop-scroll");
         nav.classList.remove("responsive");
+        nav.classList.add("padding-bottom-small");
+        navDiv.classList.remove("navbar-div-responsive");
+        menuIcon.classList.remove("rotate");
+        continueIcon.classList.remove("continue-icon-responsive");
+        navLinks.forEach(link => link.classList.remove("animate__animated", "animate__fadeInUp"));
+    }
+}
+
+function toggleMobileMenuNavLink() {
+    const nav = document.querySelector(".navbar");
+    const navDiv = document.querySelector(".navbar-div");
+    const menuIcon = document.querySelector(".menu-icon");
+    const continueIcon = document.querySelector(".continue-icon");
+    const body = document.querySelector("body");
+
+    if (nav.classList.contains("responsive")) {
+        body.classList.remove("stop-scroll");
+        nav.classList.remove("responsive");
+        nav.classList.add("padding-bottom-small");
         navDiv.classList.remove("navbar-div-responsive");
         menuIcon.classList.remove("rotate");
         continueIcon.classList.remove("continue-icon-responsive");
