@@ -807,6 +807,8 @@ a {
     max-height: 80rem;
     height: calc(100vh - (10.8rem + 12.8rem));
     position: relative;
+    display: flex;
+    flex-flow: column nowrap;
 }
 
 #landing-page-background-div {
@@ -1188,17 +1190,6 @@ body.header-not-at-top .continue-icon {
     }
 }
 
-/* Small adjustments */
-@media screen and (max-width: 1148px) and (min-width: 950px) {
-    .padding-top-mini {
-        padding-top: 0;
-    }
-
-    .landing-graphic {
-        right: -35rem;
-    }
-}
-
 /* Add hover states on larger screens */
 @media screen and (min-width: 500px) {
     .contact-button:hover {
@@ -1244,6 +1235,16 @@ body.header-not-at-top .continue-icon {
     }
 }
 
+@media screen and (max-height: 750px) and (min-width: 950px) {
+    #landing-page {
+        padding-bottom: 6.4rem;
+    }
+
+    #landing-page-background-div {
+        margin-top: calc(10.5rem + 6.4rem);
+    }
+}
+
 @media screen and (min-width: 1500px) {
     .landing-graphic {
         position: absolute;
@@ -1252,12 +1253,34 @@ body.header-not-at-top .continue-icon {
     }
 }
 
+@media screen and (max-height: 750px) and (min-width: 1450px) {
+    .landing-graphic {
+        right: 0rem;
+    }
+}
+
+@media screen and (max-width: 1400px) and (max-height: 750px) {
+    .landing-graphic {
+        right: -10rem;
+    }
+}
+
+/* Small adjustments */
+@media screen and (max-width: 1148px) and (min-width: 950px) {
+    .padding-top-mini {
+        padding-top: 0;
+    }
+
+    .landing-graphic {
+        right: -35rem;
+    }
+}
+
 @media screen and (min-width: 1550px) {
     .title-subheading {
         max-width: 40rem;
     }
 }
-
 
 @media screen and (min-height: 1000px) and (min-width: 1750px) {
     .landing-graphic {
