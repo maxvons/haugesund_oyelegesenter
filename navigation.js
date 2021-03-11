@@ -15,7 +15,7 @@ function toggleMobileMenu() {
         navDiv.classList.add("navbar-div-responsive");
         menuIcon.classList.add("rotate");
         continueIcon.classList.add("continue-icon-responsive");
-        navLinks.forEach(link => link.classList.add("animate__animated", "animate__fadeInUp"));
+        navLinks.forEach(link => link.classList.add("fadeInUp"));
     }   else {
         body.classList.remove("stop-scroll");
         nav.classList.remove("responsive");
@@ -23,7 +23,7 @@ function toggleMobileMenu() {
         navDiv.classList.remove("navbar-div-responsive");
         menuIcon.classList.remove("rotate");
         continueIcon.classList.remove("continue-icon-responsive");
-        navLinks.forEach(link => link.classList.remove("animate__animated", "animate__fadeInUp"));
+        navLinks.forEach(link => link.classList.remove("fadeInUp"));
     }
 }
 
