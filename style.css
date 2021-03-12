@@ -589,7 +589,6 @@ a {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    align-items: flex-start;
 }
 
 .about-card {
@@ -599,11 +598,16 @@ a {
     align-items: center;
     flex: 0 1 calc(33.3333% - 6.4rem);
     box-sizing: border-box;
+    border: 1px solid #D1E9FD;
+    border-radius: 12px;
+    padding: 3.2rem;
+    box-shadow: 0px 5px 12px #D1E9FD;
+    background-color: #fafdff;
 }
 
 .about-card-image {
     background-color: rgba(22, 37, 71, 0.15);
-    max-width: 30rem;
+    max-width: 28rem;
 }
 
 .about-card-image-friendly {
@@ -918,6 +922,23 @@ body.header-not-at-top .continue-icon {
     }
 }
 
+/* Adjust about cards for narrower screens */
+
+@media screen and (max-width: 1220px) {
+    .about-cards-wrapper {
+        justify-content: center;
+    }
+
+    .about-cards-wrapper > :first-child {
+        margin-right: 6.4rem;
+    }
+
+    .about-cards-wrapper > :last-child {
+        margin-top: 6.4rem;
+    }
+
+}
+
 /* Styling for narrow screens */
 
 @media screen and (max-width: 1100px) {
@@ -982,18 +1003,6 @@ body.header-not-at-top .continue-icon {
     .disease-button {
         font-size: 1.6rem;
     }
-
-    .about-cards-wrapper {
-        justify-content: center;
-    }
-
-    .about-cards-wrapper > :not(:last-child) {
-        margin-right: 6.4rem;
-    }
-
-    .about-cards-wrapper > :last-child {
-        margin-top: 6.4rem;
-    }
 }
 
 /* Adjust images */
@@ -1005,6 +1014,10 @@ body.header-not-at-top .continue-icon {
 
 @media screen and (max-width: 500px) {
     .normal-image {
+        max-width: 100%;
+    }
+
+    .about-card-image {
         max-width: 100%;
     }
 }
