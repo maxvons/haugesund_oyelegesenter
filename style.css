@@ -137,6 +137,11 @@ a {
     position: relative;
 }
 
+.about-layout {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
 .full-height {
     height: 100vh;
 }
@@ -519,7 +524,7 @@ a {
 
 .contact-button {
     font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.08em;
@@ -553,7 +558,7 @@ a {
 
 .disease-button {
     font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.08em;
@@ -578,6 +583,46 @@ a {
     border-radius: 20px;
     padding: 3.2rem;
     text-align: left;
+}
+
+.about-cards-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.about-card {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    flex: 0 1 calc(33.3333% - 6.4rem);
+    box-sizing: border-box;
+}
+
+.about-card-image {
+    background-color: rgba(22, 37, 71, 0.15);
+    max-width: 30rem;
+}
+
+.about-card-image-friendly {
+    border-radius: 54% 46% 38% 62% / 71% 71% 29% 29%;
+}
+
+.about-card-image-safety {
+    border-radius: 30% 70% 43% 57% / 52% 45% 55% 48%;
+}
+
+.about-card-image-skill {
+    border-radius: 58% 42% 80% 20% / 36% 71% 29% 64%;
+}
+
+.about-card-header {
+    font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+    font-size: 3rem;
+    color: var(--color-text-primary);
+    font-weight: 700;
 }
 
 .find-card {
@@ -717,7 +762,8 @@ a {
     animation: pulse_slow 5s infinite;
     opacity: 1;
     z-index: 2;
-    right: calc(50vw - 17px);
+    left: calc(50% - 1.7rem);
+    border: 1px solid transparent;
 }
 
 .continue-icon-responsive {
@@ -780,6 +826,10 @@ a {
 
 .center-text {
     text-align: center;
+}
+
+.background-bottom-border:hover {
+    border-bottom: 2px solid var(--color-background);
 }
 
 
@@ -891,6 +941,10 @@ body.header-not-at-top .continue-icon {
         font-size: 2.4rem;
     }
 
+    .about-card-header {
+        font-size: 2.4rem;
+    }
+
     .normal-text {
         font-size: 1.8rem;
     }
@@ -900,7 +954,7 @@ body.header-not-at-top .continue-icon {
     }
 
     .contact-button {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
 
     .about-graphic {
@@ -926,7 +980,19 @@ body.header-not-at-top .continue-icon {
     }
 
     .disease-button {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
+    }
+
+    .about-cards-wrapper {
+        justify-content: center;
+    }
+
+    .about-cards-wrapper > :not(:last-child) {
+        margin-right: 6.4rem;
+    }
+
+    .about-cards-wrapper > :last-child {
+        margin-top: 6.4rem;
     }
 }
 
@@ -1100,6 +1166,24 @@ body.header-not-at-top .continue-icon {
     .about-graphic {
         position: static;
         max-width: 100%;
+    }
+
+    .about-cards-wrapper {
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+
+    .about-cards-wrapper > :not(:last-child) {
+        margin-bottom: 6.4rem;
+        margin-right: 0;
+    }
+
+    .about-cards-wrapper > :last-child {
+        margin-top: 0;
+    }
+
+    .about-card {
+        max-width: 50rem;
     }
 
     .find-card {
