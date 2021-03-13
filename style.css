@@ -302,6 +302,10 @@ a {
     margin-bottom: 6.4rem;
 }
 
+.margin-bottom-about-page {
+    margin-bottom: calc(12.8rem - 1.6rem);
+}
+
 .margin-bottom-very-large {
     margin-bottom: 12.8rem;
 }
@@ -589,6 +593,7 @@ a {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
+    padding-bottom: 1.6rem;
 }
 
 .about-card {
@@ -1137,6 +1142,10 @@ body.header-not-at-top .continue-icon {
 
     .margin-bottom-large {
         margin-bottom: 3.2rem;
+    }
+
+    .margin-bottom-about-page {
+        margin-bottom: 0;
     }
 
     .margin-bottom-very-large {
