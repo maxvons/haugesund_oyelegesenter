@@ -183,6 +183,7 @@ a {
     column-gap: 6.4rem;
     row-gap: 6.4rem;
     position: relative;
+    padding-bottom: 1.6rem;
 }
 
 .align-start {
@@ -323,6 +324,10 @@ a {
 }
 
 .margin-bottom-about-page {
+    margin-bottom: calc(12.8rem - 1.6rem);
+}
+
+.margin-bottom-diseases-page {
     margin-bottom: calc(12.8rem - 1.6rem);
 }
 
@@ -561,17 +566,30 @@ a {
 
 .to-top-button {
     position: fixed;
-    bottom: 3.2rem;
-    right: 3.2rem;
-    height: 10rem;
-    width: 10rem;
+    bottom: 1.6rem;
+    right: 1.6rem;
+    height: 6rem;
+    width: 6rem;
     font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
     font-size: 1.8rem;
     font-weight: 700;
-    background-color: var(--color-background);
+    background-color: var(--color-primary-500);
     color: var(--color-text-primary);
-    border: 4px solid var(--color-primary-900);
-    border-radius: 50%;
+    border-radius: 100%;
+    z-index: 999;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    box-shadow: var(--box-shadow-button);
+    transition: all 0.2s ease;
+}
+
+.show {
+    display: flex;
+}
+
+.top-button-icon {
+    stroke: var(--color-text-white);
 }
 
 .disease-button {
@@ -744,6 +762,10 @@ a {
     background-color: var(--color-background-diseases-page);
 }
 
+.diseases-background-red {
+    background-color: red;
+}
+
 .diseases-graphic-top-right {
     position: absolute;
     right: -10rem;
@@ -848,6 +870,10 @@ a {
     display: none;
 }
 
+.unhide {
+    display: flex;
+}
+
 .stop-scroll {
     overflow: hidden;
 }
@@ -903,6 +929,16 @@ a {
     width: 1px;
     height: 1px;
     top: 300px;
+    left: 0;
+    background-color: var(--color-background);
+    opacity: 0;
+}
+
+#top-of-site-pixel-anchor-two {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    top: 1200px;
     left: 0;
     background-color: var(--color-background);
     opacity: 0;
@@ -1182,6 +1218,10 @@ body.header-not-at-top .continue-icon {
         margin-bottom: 0rem;
     }
 
+    .margin-bottom-diseases-page {
+        margin-bottom: 0rem;
+    }
+
     .margin-bottom-contact {
         margin-bottom: 6.4rem;
     }
@@ -1389,6 +1429,12 @@ body.header-not-at-top .continue-icon {
     .img-card:hover {
         box-shadow: var(--box-shadow-card-hovered);
         transform: scale(1.01);
+    }
+
+    .to-top-button:hover {
+        transform: scale(1.03);
+        background-color: var(--color-background-button-hovered);
+        box-shadow: 0px 7px 20px var(--color-shadow-hovered);
     }
 }
 
