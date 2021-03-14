@@ -60,22 +60,22 @@ window.onload = function() {
 
                 /* Get the correct element. */
                 const target = entry.target.id === "top-of-site-pixel-anchor"
-                                   ? document.querySelector(".continue-icon")
+                                   ? document.querySelector(".continue-button")
                                    : document.querySelector(".to-top-button");
 
                 /* Determine which class to add. */
-                const classAdd = target.classList.contains("continue-icon") ? "hide" : "show";
+                const classAdd = target.classList.contains("continue-button") ? "hide" : "show";
 
                 target.classList.add(classAdd);
             }   else {
 
                 /* Get the correct element. */
                 const target = entry.target.id === "top-of-site-pixel-anchor"
-                                ? document.querySelector(".continue-icon")
+                                ? document.querySelector(".continue-button")
                                 : document.querySelector(".to-top-button");
 
                 /* Determine which class to remove. */
-                const classRemove = target.classList.contains("continue-icon") ? "hide" : "show";
+                const classRemove = target.classList.contains("continue-button") ? "hide" : "show";
 
                 /*
                 Check if the element already contains the class.
