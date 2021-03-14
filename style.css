@@ -77,6 +77,10 @@
 
 /* TAG STYLING */
 
+*:focus {
+    outline: 4px dotted var(--color-primary-500);
+}
+
 html {
     font-size: 62.5%;
     scroll-behavior: smooth;
@@ -510,6 +514,10 @@ a {
     border-bottom: 2px solid var(--color-black);
 }
 
+.footer-link:focus {
+    outline: 4px dotted var(--color-primary-200);
+}
+
 .disease-heading {
     font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
     font-size: 1.8rem;
@@ -555,10 +563,8 @@ a {
     letter-spacing: 0.08em;
     color: var(--color-text-white);
     background-color: var(--color-background-button);
-    border: none;
     border-radius: var(--border-radius);
     padding: 1.6rem 3.2rem;
-    cursor: pointer;
     box-shadow: var(--box-shadow-button);
     transition: box-shadow 0.2s ease, transform 0.2s ease,
                 background-color 0.2s ease;
@@ -601,14 +607,12 @@ a {
     color: var(--color-text-white);
     stroke: transparent;
     background-color: var(--color-background-button);
-    border: none;
     border-radius: var(--border-radius);
     padding: 1.6rem 4.8rem;
-    outline: none;
     position: relative;
-    cursor: pointer;
     box-shadow: var(--box-shadow-button);
-    transition: all 0.2s ease;
+    transition: box-shadow 0.2s ease, transform 0.2s ease,
+                background-color 0.2s ease;
 }
 
 .text-box {
