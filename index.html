@@ -144,7 +144,7 @@
                     </div>
                 </div>
             </div>
-            <div id="diseases-page" class="full-page-background diseases-background-color margin-bottom-very-large padding-top-very-large">
+            <div id="diseases-page" class="full-page-background diseases-background-color margin-bottom-diseases-page padding-top-very-large">
                 <div class="full-page diseases-layout">
                     <h1 class="section-heading margin-bottom-medium">Øyesykdommer</h1>
                     <span class="heading-accent margin-bottom-medium"></span>
@@ -294,10 +294,15 @@
                     </div>
                 </footer>
             </div>
-            <button class="to-top-button hide">Opp til toppen</button>
+            <a class="to-top-button" href="#main-div" title="Gå til toppen av siden">
+                <svg class="top-button-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-labelledby="top-button-icon" role="img">
+                    <title id="top-button-icon">Gå til toppen av siden</title>
+                    <use href="#top-icon"></use>
+                </svg>
+            </a>
 
             <!-- Continue icon -->
-            <a href="#about-page">
+            <a href="#about-page" title="Fortsett nedover">
                 <svg class="continue-icon" width="34" height="47" viewBox="0 0 34 47" fill="none" xmlns="http://www.w3.org/2000/svg" aria-labelledby="continue-icon-title" role="img">
                     <title id="continue-icon-title">Fortsett nedover</title>
                     <path class="continue-arrow" d="M3 3L16.6989 17L31 3" stroke-width="7"/>
@@ -341,9 +346,16 @@
                         <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
                         <circle cx="12" cy="12" r="3"/>
                     </symbol>
+
+                    <!-- Top icon -->
+                    <symbol id="top-icon" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="12" y1="19" x2="12" y2="5"></line>
+                        <polyline points="5 12 12 5 19 12"></polyline>
+                    </symbol>
                  </defs>
             </svg>
         </main>
-        <div id="top-of-site-pixel-anchor"></div>
+        <div id="top-of-site-pixel-anchor" class="anchor"></div>
+        <div id="top-of-site-pixel-anchor-two" class="anchor"></div>
     </body>
 </html>

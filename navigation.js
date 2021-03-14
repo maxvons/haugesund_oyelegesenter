@@ -45,18 +45,54 @@ function toggleMobileMenuNavLink() {
 }
 
 window.onload = function() {
-    if (
-        "IntersectionObserver" in window &&
-        "IntersectionObserverEntry" in window &&
-        "intersectionRatio" in window.IntersectionObserverEntry.prototype
-        ) {
-        let observer = new IntersectionObserver(entries => {
-            if (entries[0].boundingClientRect.y < 0) {
-            document.body.classList.add("header-not-at-top");
-            } else {
-            document.body.classList.remove("header-not-at-top");
+
+    /*
+    Make sure continue button vanishes when scrolling down and comes into view
+    when scrolling up. Make sure that to-top button comes into view when scrolling
+    further down and vanishes when scrolling up again.
+    */
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+
+            /* If scrolled past the anchor. */
+            if (entry.boundingClientRect.y < 0) {
+
+                /* Get the correct element. */
+                const target = entry.target.id === "top-of-site-pixel-anchor"
+                                   ? document.querySelector(".continue-icon")
+                                   : document.querySelector(".to-top-button");
+
+                /* Determine which class to add. */
+                const classAdd = target.classList.contains("continue-icon") ? "hide" : "show";
+
+                target.classList.add(classAdd);
+            }   else {
+
+                /* Get the correct element. */
+                const target = entry.target.id === "top-of-site-pixel-anchor"
+                                ? document.querySelector(".continue-icon")
+                                : document.querySelector(".to-top-button");
+
+                /* Determine which class to remove. */
+                const classRemove = target.classList.contains("continue-icon") ? "hide" : "show";
+
+                /*
+                Check if the element already contains the class.
+                This means that we have scrolled past the element once, and are
+                now scrolling up again.
+                */
+                if (target.classList.contains(classRemove)) {
+                    target.classList.remove(classRemove);
+                }
             }
         });
-        observer.observe(document.querySelector("#top-of-site-pixel-anchor"));
-    }
+    });
+
+    /* Get the pixel-anchors that are used as waypoints for the buttons. */
+    const anchors = document.querySelectorAll(".anchor")
+
+    anchors.forEach(anchor => {
+        observer.observe(anchor);
+    });
 }
