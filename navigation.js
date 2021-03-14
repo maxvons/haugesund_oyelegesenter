@@ -44,8 +44,11 @@ function toggleMobileMenuNavLink() {
     }
 }
 
-window.onload = function() {
-
+/*
+Function for creating an IntersectionObserver that observes the continue button
+and the to-top button.
+*/
+function observeButtons() {
     /*
     Make sure continue button vanishes when scrolling down and comes into view
     when scrolling up. Make sure that to-top button comes into view when scrolling
@@ -95,4 +98,41 @@ window.onload = function() {
     anchors.forEach(anchor => {
         observer.observe(anchor);
     });
+}
+
+/*
+Adds scroll animations to relevant elements with the relevant classes.
+*/
+function addScrollAnimations() {
+    const fadeUpElems = document.querySelectorAll(".scroll-animated-up");
+    const fadeLeftElems = document.querySelectorAll(".scroll-animated-left");
+    const fadeLeftUpElems = document.querySelectorAll(".scroll-animated-left-up");
+    const fadeRightElems = document.querySelectorAll(".scroll-animated-right");
+    const fadeRightUpElems = document.querySelectorAll(".scroll-animated-right-up");
+    const animatedElems = [];
+
+    fadeUpElems.forEach(elem => animatedElems.push(elem));
+    fadeLeftElems.forEach(elem => animatedElems.push(elem));
+    fadeLeftUpElems.forEach(elem => animatedElems.push(elem));
+    fadeRightElems.forEach(elem => animatedElems.push(elem));
+    fadeRightUpElems.forEach(elem => animatedElems.push(elem));
+
+    observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.intersectionRatio > 0) {
+                const animationType = entry.target.classList[1];
+                console.log(animationType);
+                entry.target.classList.add(`${animationType}-anim`);
+                entry.target.classList.add(`${animationType}-done`);
+                observer.unobserve(entry.target);
+            }
+        });
+    });
+
+    animatedElems.forEach(elem => observer.observe(elem));
+}
+
+window.onload = function() {
+    observeButtons();
+    addScrollAnimations();
 }

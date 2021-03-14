@@ -902,6 +902,76 @@ a {
     text-align: center;
 }
 
+.scroll-animated-up {
+    transform: translateY(300px);
+    opacity: 0;
+}
+
+.scroll-animated-left-up {
+    transform: translate(150px, 300px);
+    opacity: 0;
+}
+
+.scroll-animated-left-up-done {
+    transform: translate(0, 0);
+    opacity: 1;
+}
+
+.scroll-animated-right-up {
+    transform: translate(-150px, 300px);
+    opacity: 0;
+}
+
+.scroll-animated-right-up-done {
+    transform: translate(0, 0);
+    opacity: 1;
+}
+
+.scroll-animated-up-done {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.scroll-animated-left {
+    transform: translateX(300px);
+    opacity: 0;
+}
+
+.scroll-animated-left-done {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.scroll-animated-right {
+    transform: translateX(-300px);
+    opacity: 0;
+}
+
+.scroll-animated-right-done {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.scroll-animated-up-anim {
+    animation: fadeInUpScroll 1s ease;
+}
+
+.scroll-animated-left-up-anim {
+    animation: fadeInUpLeftScroll 1s ease;
+}
+
+.scroll-animated-right-up-anim {
+    animation: fadeInUpRightScroll 1s ease;
+}
+
+.scroll-animated-left-anim {
+    animation: fadeInLeftScroll 1s ease;
+}
+
+.scroll-animated-right-anim {
+    animation: fadeInRightScroll 1s ease;
+}
+
 .fadeInUp {
     animation: fadeInUp 0.8s ease;
 }
@@ -914,6 +984,61 @@ a {
     100% {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUpScroll {
+    0% {
+        opacity: 0;
+        transform: translateY(300px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUpLeftScroll {
+    0% {
+        opacity: 0;
+        transform: translate(150px, 300px)
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes fadeInUpRightScroll {
+    0% {
+        opacity: 0;
+        transform: translate(-150px, 300px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes fadeInLeftScroll {
+    0% {
+        opacity: 0;
+        transform: translateX(300px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRightScroll {
+    0% {
+        opacity: 0;
+        transform: translateX(-300px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
 
