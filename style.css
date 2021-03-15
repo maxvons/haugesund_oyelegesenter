@@ -74,6 +74,78 @@
 
     /* Borders */
     --border-card: 1px solid var(--color-border);
+
+    /* Font stacks */
+    --font-stack-serif: "Source Serif Pro", Georgia, 'Times New Roman', Times, serif;
+    --font-stack-sans: "Source Sans Pro", Arial, Helvetica, sans-serif;
+}
+
+/* FONTS */
+
+/* source-sans-pro-regular - latin */
+@font-face {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local(''),
+         url('assets/fonts/source_sans_pro/source-sans-pro-v14-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('assets/fonts/source_sans_pro/source-sans-pro-v14-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+  /* source-sans-pro-italic - latin */
+@font-face {
+    font-family: 'Source Sans Pro';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: local(''),
+         url('assets/fonts/source_sans_pro/source-sans-pro-v14-latin-italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('assets/fonts/source_sans_pro/source-sans-pro-v14-latin-italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* source-sans-pro-600 - latin */
+@font-face {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: local(''),
+         url('assets/fonts/source_sans_pro/source-sans-pro-v14-latin-600.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('assets/fonts/source_sans_pro/source-sans-pro-v14-latin-600.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* source-sans-pro-700 - latin */
+@font-face {
+font-family: 'Source Sans Pro';
+font-style: normal;
+font-weight: 700;
+font-display: swap;
+src: local(''),
+     url('assets/fonts/source_sans_pro/source-sans-pro-v14-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+     url('assets/fonts/source_sans_pro/source-sans-pro-v14-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* source-serif-pro-700 - latin */
+@font-face {
+    font-family: 'Source Serif Pro';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: local(''),
+         url('assets/fonts/source_serif_pro/source-serif-pro-v10-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('assets/fonts/source_serif_pro/source-serif-pro-v10-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* source-serif-pro-900 - latin */
+@font-face {
+    font-family: 'Source Serif Pro';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: local(''),
+         url('assets/fonts/source_serif_pro/source-serif-pro-v10-latin-900.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('assets/fonts/source_serif_pro/source-serif-pro-v10-latin-900.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 /* TAG STYLING */
@@ -98,7 +170,7 @@ img {
 }
 
 p {
-    font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+    font-family: var(--font-stack-sans);
     font-size: 2rem;
 }
 
@@ -395,14 +467,14 @@ a {
 /* Text styles */
 
 .section-heading {
-    font-family: "Source Serif Pro", Georgia, 'Times New Roman', Times, serif;
+    font-family: var(--font-stack-serif);
     font-size: 6.4rem;
     font-weight: 700;
     color: var(--color-text-primary);
 }
 
 .section-subheading {
-    font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+    font-family: var(--font-stack-sans);
     font-size: 3rem;
     font-weight: 400;
     color: var(--color-text-secondary);
@@ -422,7 +494,7 @@ a {
 }
 
 .normal-text {
-    font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+    font-family: var(--font-stack-sans);
     font-size: 2rem;
     font-weight: 400;
     line-height: 1.5;
@@ -431,7 +503,7 @@ a {
 }
 
 .nav-link {
-    font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+    font-family: var(--font-stack-sans);
     color: var(--color-text-primary);
     stroke: var(--color-text-primary);
     font-weight: 600;
@@ -455,7 +527,7 @@ a {
 }
 
 .find-card-section-heading {
-    font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+    font-family: var(--font-stack-sans);
     font-size: 1.8rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -463,7 +535,7 @@ a {
 }
 
 .find-card-section-info {
-    font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+    font-family: var(--font-stack-sans);
     font-size: 2rem;
     font-weight: 400;
     color: var(--color-text-primary);
@@ -495,7 +567,7 @@ a {
 }
 
 .footer-text {
-    font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+    font-family: var(--font-stack-sans);
     color: var(--color-text-white-footer);
     font-size: var(--text-size-footer);
     margin-top: 0;
@@ -521,7 +593,7 @@ a {
 }
 
 .disease-heading {
-    font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+    font-family: var(--font-stack-sans);
     font-size: 1.8rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -530,7 +602,7 @@ a {
 }
 
 .disease-text {
-    font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+    font-family: var(--font-stack-sans);
     font-size: 2rem;
     font-weight: 400;
     max-width: 50rem;
@@ -558,7 +630,7 @@ a {
 }
 
 .contact-button {
-    font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+    font-family: var(--font-stack-sans);
     font-size: 1.8rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -578,7 +650,7 @@ a {
     right: 1.6rem;
     height: 6rem;
     width: 6rem;
-    font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+    font-family: var(--font-stack-sans);
     font-size: 1.8rem;
     font-weight: 700;
     background-color: var(--color-primary-500);
@@ -601,7 +673,7 @@ a {
 }
 
 .disease-button {
-    font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+    font-family: var(--font-stack-sans);
     font-size: 1.8rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -675,7 +747,7 @@ a {
 }
 
 .about-card-header {
-    font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+    font-family: var(--font-stack-sans);
     font-size: 3rem;
     color: var(--color-text-primary);
     font-weight: 700;
@@ -743,7 +815,7 @@ a {
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
-    font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+    font-family: var(--font-stack-sans);
     font-size: 2.8rem;
     font-weight: 600;
     letter-spacing: 0.08em;
