@@ -361,19 +361,19 @@
         <div id="top-of-site-pixel-anchor-two" class="anchor"></div>
 
         <script>
-            document.body.addEventListener(
-              "load",
-              (e) => {
+            document.body.addEventListener("load", e => {
                 if (e.target.tagName != "IMG") {
-                  return;
+                    return;
                 }
+
                 // Remove the blurry placeholder.
                 const classArray = [...e.target.classList];
                 const classToRemove = classArray.filter(ele => ele.includes("blurry-placeholder-"))[0];
                 e.target.classList.remove(classToRemove);
-              },
-              /* capture */ true
+                },
+                /* capture */ true
             );
-          </script>
+        </script>
+        <script src="scripts/zenscroll-min.js"></script>
     </body>
 </html>
