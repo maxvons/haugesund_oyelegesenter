@@ -686,7 +686,7 @@ a {
     position: relative;
     box-shadow: var(--box-shadow-button);
     transition: box-shadow 0.2s ease, transform 0.2s ease,
-                background-color 0.2s ease;
+                background-color 0.2s ease, stroke 0.2s ease;
 }
 
 .text-box {
