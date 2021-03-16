@@ -980,10 +980,6 @@ a {
     border-radius: var(--border-radius);
 }
 
-.content-auto {
-    content-visibility: auto;
-}
-
 .blurry-placeholder {
     background-size: cover;
 }
