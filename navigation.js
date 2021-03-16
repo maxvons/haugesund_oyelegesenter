@@ -3,7 +3,6 @@
 function toggleMobileMenu() {
     const nav = document.querySelector(".navbar");
     const navDiv = document.querySelector(".navbar-div");
-    const menuIcon = document.querySelector(".menu-icon");
     const continueIcon = document.querySelector(".continue-icon");
     const body = document.querySelector("body");
     const navLinks = document.querySelectorAll(".nav-link");
@@ -13,7 +12,6 @@ function toggleMobileMenu() {
         nav.classList.add("responsive");
         nav.classList.remove("padding-bottom-small");
         navDiv.classList.add("navbar-div-responsive");
-        menuIcon.classList.add("rotate");
         continueIcon.classList.add("continue-icon-responsive");
         navLinks.forEach(link => link.classList.add("fadeInUp"));
     }   else {
@@ -21,7 +19,6 @@ function toggleMobileMenu() {
         nav.classList.remove("responsive");
         nav.classList.add("padding-bottom-small");
         navDiv.classList.remove("navbar-div-responsive");
-        menuIcon.classList.remove("rotate");
         continueIcon.classList.remove("continue-icon-responsive");
         navLinks.forEach(link => link.classList.remove("fadeInUp"));
     }
@@ -30,7 +27,6 @@ function toggleMobileMenu() {
 function toggleMobileMenuNavLink() {
     const nav = document.querySelector(".navbar");
     const navDiv = document.querySelector(".navbar-div");
-    const menuIcon = document.querySelector(".menu-icon");
     const continueIcon = document.querySelector(".continue-icon");
     const body = document.querySelector("body");
 
@@ -39,7 +35,6 @@ function toggleMobileMenuNavLink() {
         nav.classList.remove("responsive");
         nav.classList.add("padding-bottom-small");
         navDiv.classList.remove("navbar-div-responsive");
-        menuIcon.classList.remove("rotate");
         continueIcon.classList.remove("continue-icon-responsive");
     }
 }
