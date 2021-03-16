@@ -5,6 +5,7 @@ function toggleMobileMenu() {
     const navDiv = document.querySelector(".navbar-div");
     const continueIcon = document.querySelector(".continue-icon");
     const body = document.querySelector("body");
+    const topButton = document.querySelector(".to-top-button");
     const navLinks = document.querySelectorAll(".nav-link");
 
     if (!nav.classList.contains("responsive")) {
@@ -13,6 +14,13 @@ function toggleMobileMenu() {
         nav.classList.remove("padding-bottom-small");
         navDiv.classList.add("navbar-div-responsive");
         continueIcon.classList.add("continue-icon-responsive");
+
+        /* If top-button is visible, it should not be shown on the mobile menu. */
+        if (topButton.classList.contains("show")) {
+            topButton.classList.remove("show");
+            topButton.classList.add("triggered-by-menu"); /* If it was hidden by the menu */
+        }
+
         navLinks.forEach(link => link.classList.add("fadeInUp"));
     }   else {
         body.classList.remove("stop-scroll");
@@ -20,15 +28,23 @@ function toggleMobileMenu() {
         nav.classList.add("padding-bottom-small");
         navDiv.classList.remove("navbar-div-responsive");
         continueIcon.classList.remove("continue-icon-responsive");
+
+        /* If top-button was hidden by mobile menu, it should be shown again. */
+        if (topButton.classList.contains("triggered-by-menu")) {
+            topButton.classList.add("show");
+            topButton.classList.remove("triggered-by-menu");
+        }
+
         navLinks.forEach(link => link.classList.remove("fadeInUp"));
     }
 }
 
-function toggleMobileMenuNavLink() {
+function toggleMobileMenuNavLink(caller) {
     const nav = document.querySelector(".navbar");
     const navDiv = document.querySelector(".navbar-div");
     const continueIcon = document.querySelector(".continue-icon");
     const body = document.querySelector("body");
+    const topButton = document.querySelector(".to-top-button");
 
     if (nav.classList.contains("responsive")) {
         body.classList.remove("stop-scroll");
@@ -36,6 +52,17 @@ function toggleMobileMenuNavLink() {
         nav.classList.add("padding-bottom-small");
         navDiv.classList.remove("navbar-div-responsive");
         continueIcon.classList.remove("continue-icon-responsive");
+
+        /* Check if top-button should be shown again */
+        if (topButton.classList.contains("triggered-by-menu")) {
+            const showButtonCallers = ["nav-link-find", "nav-link-disease",
+                                       "nav-link-contact"];
+            /* If the scroll position requires the top-button to be visible */
+            if (showButtonCallers.includes(caller.id)) {
+                topButton.classList.add("show");
+                topButton.classList.remove("triggered-by-menu");
+            }
+        }
     }
 }
 
